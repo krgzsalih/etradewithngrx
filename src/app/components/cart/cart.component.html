@@ -1,0 +1,11 @@
+<h1>--------- SEPET ----------</h1>
+
+<table *ngIf="cart">
+    <tr *ngFor="let data of cart">
+        <td>{{data.name}}</td>
+        <td>{{data.unitPrice}}</td>
+        <td><button (click)="deleteProduct(data)">Sil</button></td>
+    </tr>
+    <tr><button>Satın Al</button></tr>
+    <tr><button (click)="clearCart()">Sepeti Temizle</button></tr>
+</table>

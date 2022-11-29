@@ -1,0 +1,9 @@
+<button routerLink="/cart">Sepete Git</button>
+<table>
+    <tr *ngFor="let data of products">
+        <td>{{data.name}}</td>
+        <td>{{data.unitPrice}}</td>
+        <td><button routerLink="detail/{{data.id}}" (click)="getProductDetail(data)">Detaya Git</button></td>
+        <!-- <td><button (click)="addToCart(data)">Detaya Git</button></td> -->
+    </tr>
+</table>
