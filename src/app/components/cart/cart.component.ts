@@ -25,6 +25,7 @@ export class CartComponent implements OnInit {
   }
 
   clearCart() {
-    this.cart = [];
+    // this.cart = [];
+    this.store.dispatch({ type: 'CLEAR_CART' });
   }
 }

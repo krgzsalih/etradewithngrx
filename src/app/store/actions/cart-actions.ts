@@ -4,7 +4,6 @@ import { Action } from '@ngrx/store';
 export enum CartActionTypes {
   ADD_PRODUCT = 'ADD_PRODUCT',
   REMOVE_PRODUCT = 'REMOVE_PRODUCT',
-  CLEAR_CART = 'CLEAR_CART',
 }
 
 export class AddProduct implements Action {
@@ -17,9 +16,4 @@ export class RemoveProduct implements Action {
   constructor(public payload: IProduct) {}
 }
 
-export class ClearCart implements Action {
-  type: string = CartActionTypes.CLEAR_CART;
-  constructor(public payload: IProduct) {}
-}
-
-export type CartActions = AddProduct | RemoveProduct | ClearCart;
+export type CartActions = AddProduct | RemoveProduct;
